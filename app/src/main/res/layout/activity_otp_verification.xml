@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_title_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/ll_back"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:src="@mipmap/back_arrow_icon" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:src="@mipmap/basu_icon"
+
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_main"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_below="@+id/ll_title_bar"
+                android:layout_weight="2">
+
+                <com.basu.CustomView.TextViewRobotoBold
+                    android:id="@+id/tv_user_name"
+                    style="@style/TextStyle.Title.Sub"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:gravity="bottom|left"
+                    android:text="@string/txt_user_name"
+                    android:textColor="@color/grey_black_1000"
+                    android:textSize="@dimen/_20sdp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_weight="6"
+            android:background="@mipmap/otp_bg_image">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.basu.CustomView.TextViewSourceSansProRegular
+                    android:id="@+id/txt_create_four_digit_screen"
+                    style="@style/TextStyle.Title.Sub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:gravity="center"
+                    android:text="@string/txt_create_four_digit_screen"
+                    android:textSize="@dimen/_18sdp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_create_four_digit_screen"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:orientation="horizontal">
+
+                    <com.basu.CustomView.EditTextSourceSansPro
+                        android:id="@+id/edt_otp_number_one"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="@string/edt_dot"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:nextFocusDown="@+id/edt_otp_number_two"
+                        android:textSize="@dimen/_28sdp" />
+
+
+                    <com.basu.CustomView.EditTextSourceSansPro
+                        android:id="@+id/edt_otp_number_two"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="@string/edt_dot"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:nextFocusDown="@+id/edt_otp_number_three"
+                        android:textSize="@dimen/_28sdp" />
+
+
+                    <com.basu.CustomView.EditTextSourceSansPro
+                        android:id="@+id/edt_otp_number_three"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="@string/edt_dot"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:nextFocusDown="@+id/edt_otp_number_four"
+                        android:textSize="@dimen/_28sdp" />
+
+                    <com.basu.CustomView.EditTextSourceSansPro
+                        android:id="@+id/edt_otp_number_four"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="@string/edt_dot"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textSize="@dimen/_28sdp" />
+
+                </LinearLayout>
+                <!--</ScrollView>-->
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="2.7"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_click_to_next_registration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@color/grey_black_1000"
+                android:padding="@dimen/_10sdp"
+                android:weightSum="2">
+
+                <com.basu.CustomView.TextViewSourceSansProRegular
+                    style="@style/TextStyle.Title.Sub"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_weight="2"
+                    android:gravity="center|left"
+                    android:text="@string/txt_click_to_next_registration"
+                    android:textColor="@color/grey_white_1000"
+                    android:textSize="@dimen/_12sdp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:gravity="right"
+                    android:src="@mipmap/white_arrow" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

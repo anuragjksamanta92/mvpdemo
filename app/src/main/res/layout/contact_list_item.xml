@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    android:orientation="vertical">
+
+    <com.basu.CustomView.TextViewNeutonRegular
+        android:id="@+id/tv_contact_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact Name"
+        android:textSize="@dimen/_14sdp"
+        android:padding="@dimen/_5sdp" />
+
+    <com.basu.CustomView.TextViewRobotoBold
+        android:id="@+id/tv_contact_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact Number"
+        android:textSize="@dimen/_14sdp"
+        android:padding="@dimen/_5sdp" />
+
+</LinearLayout>
